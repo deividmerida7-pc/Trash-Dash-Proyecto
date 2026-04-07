@@ -13,6 +13,8 @@ public class Player_Movimiento : MonoBehaviour
     public float VelocidadMax = 20f;
     public float Desaceleracion = 10f;
 
+    public float PlacaVelocidad;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -63,4 +65,5 @@ public class Player_Movimiento : MonoBehaviour
         }
         
     }
+
 }
