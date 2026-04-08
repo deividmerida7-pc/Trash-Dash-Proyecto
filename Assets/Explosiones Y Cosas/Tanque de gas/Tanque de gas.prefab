@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1575613795115895381}
   - component: {fileID: 4624749729225479531}
-  - component: {fileID: 3490771184249904015}
+  - component: {fileID: 4283200625203151507}
+  - component: {fileID: -2338536725569819167}
   m_Layer: 0
   m_Name: Tanque de gas
   m_TagString: Explosion
@@ -53,11 +54,24 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.3191223
+  m_Radius: 0.3687439
   m_Height: 0.89259267
   m_Direction: 1
-  m_Center: {x: 0, y: 0.43709648, z: -0.01272583}
---- !u!54 &3490771184249904015
+  m_Center: {x: -0.000030517578, y: 0.43709648, z: 0.0016784668}
+--- !u!114 &4283200625203151507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2689368469183464745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85491c0773ca8d842992554d9a70a840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Particula_Bomb: {fileID: 5671401000491409027, guid: 68942f36815ddbd40a2a7a2fd3ca00ef, type: 3}
+--- !u!54 &-2338536725569819167
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

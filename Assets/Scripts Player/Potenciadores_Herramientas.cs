@@ -17,7 +17,7 @@ public class Potenciadores_Herramientas : MonoBehaviour
     {
         if(GasDrop == true)
         {
-            if (Input.GetKeyDown(KeyCode.V))
+            if (Input.GetKeyDown(KeyCode.V) && GasCargado == true)
             {
                 Instantiate(TanqueGas, GasDrop.transform.position, GasDrop.transform.rotation);
                 GasCargado = false;

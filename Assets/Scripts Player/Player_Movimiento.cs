@@ -14,6 +14,9 @@ public class Player_Movimiento : MonoBehaviour
     public float Desaceleracion = 10f;
 
     public float PlacaVelocidad;
+    public float DelayPlaca;
+    public float VelocidadMaxEstablecida;
+    public float VelocidadMaxAumentada;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -66,4 +69,16 @@ public class Player_Movimiento : MonoBehaviour
         
     }
 
+    public void MejoraVelocidad()
+    {
+        
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.transform.tag == "Velocidad")
+        {
+            MejoraVelocidad();
+        }
+    }
 }
