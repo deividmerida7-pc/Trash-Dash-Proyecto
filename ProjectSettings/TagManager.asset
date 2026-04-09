@@ -10,6 +10,7 @@ TagManager:
   - Terreno
   - Carro
   - Parachoques
+  - Herramienta
   layers:
   - Default
   - TransparentFX

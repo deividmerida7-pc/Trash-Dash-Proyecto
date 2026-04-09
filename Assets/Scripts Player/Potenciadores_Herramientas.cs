@@ -25,4 +25,12 @@ public class Potenciadores_Herramientas : MonoBehaviour
 
         }
     }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.transform.tag == "Herramienta")
+        {
+            GasCargado=true;
+        }
+    }
 }

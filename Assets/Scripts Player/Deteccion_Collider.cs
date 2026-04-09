@@ -6,6 +6,8 @@ public class Deteccion_Collider : MonoBehaviour
 
     public GameObject Punto_Explosion;
     public GameObject Particula_Craneo;
+
+    public GameObject RespawnPlayer;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -27,6 +29,16 @@ public class Deteccion_Collider : MonoBehaviour
         {
             if(ParteGolpeada == "Parachoques")
             {
+                ReiniciarPlayer();
+                Explotar();
+            }
+        }
+
+        if(ObjetoGolpeado.CompareTag("Terreno"))
+        {
+            if(ParteGolpeada == "Cuerpo")
+            {
+                ReiniciarPlayer();
                 Explotar();
             }
         }
@@ -37,5 +49,10 @@ public class Deteccion_Collider : MonoBehaviour
         Debug.Log("El Carro Exploto");
 
         Instantiate(Particula_Craneo, Punto_Explosion.transform.position, Punto_Explosion.transform.rotation);
+    }
+
+    public void ReiniciarPlayer()
+    {
+        RespawnPlayer.SetActive(false);
     }
 }

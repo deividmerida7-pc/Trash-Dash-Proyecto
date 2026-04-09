@@ -27,7 +27,15 @@ public class Player_Movimiento : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        DelayPlaca -= Time.deltaTime;
         Acelerar_Y_Girar();
+
+        if(DelayPlaca < 0 )
+        {
+            VelocidadMax = VelocidadMaxEstablecida;
+
+        }
+
     }
 
     public void Acelerar_y_Frenar()
@@ -71,7 +79,9 @@ public class Player_Movimiento : MonoBehaviour
 
     public void MejoraVelocidad()
     {
-        
+        DelayPlaca = 1f;
+        VelocidadMax = VelocidadMaxAumentada;
+        VelocidadActual = VelocidadActual + PlacaVelocidad;
     }
 
     public void OnTriggerEnter(Collider other)
